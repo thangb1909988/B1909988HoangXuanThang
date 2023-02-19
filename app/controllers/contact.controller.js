@@ -87,7 +87,7 @@ exports.delete = async (req, res, next) => {
     }
 };
 
-exports.deleteAll = async (_req, res, next) => {git add -u
+exports.deleteAll = async (_req, res, next) => {
     try {
         const contactService =  new ContactService(MongoDB.client);
         const documents = await contactService.deleteAll();
