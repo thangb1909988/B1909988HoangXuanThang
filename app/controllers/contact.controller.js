@@ -1,6 +1,6 @@
-const ApiError = require("../api-error");
 const ContactService = require("../services/contact.service");
 const MongoDB = require("../utils/mongodb.util");
+const ApiError = require("../api-error");
 
 exports.create = async (req, res, next) => {
     if(!req.body?.name) {
@@ -16,7 +16,7 @@ exports.create = async (req, res, next) => {
             new ApiError(500, "An error occurred while creating the contact")
         );
     }
-}
+};
 
 exports.findAll = async (req, res, next) => {
     let documents = [];
@@ -35,7 +35,7 @@ exports.findAll = async (req, res, next) => {
         );
     }
     return res.send(documents);
-}
+};
 
 exports.findOne = async (req, res, next) => {
     try {

@@ -14,7 +14,7 @@ class ContactService {
             favorite: payload.favorite,
         };
     
-        Objects.keys(contact).forEach(
+        Object.keys(contact).forEach(
             (key) => contact[key] === undefined && delete contact[key]
         );   
         return contact;         
@@ -43,7 +43,7 @@ class ContactService {
 
     async findById(id) {
         return await this.Contact.findOne({
-            _id: ObjectId.isValid(id) ? new ObjectId(id) : null
+            _id: ObjectId.isValid(id) ? new ObjectId(id) : null,
         });
     }
 
