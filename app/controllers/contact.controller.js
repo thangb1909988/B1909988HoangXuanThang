@@ -16,7 +16,7 @@ exports.create = async (req, res, next) => {
             new ApiError(500, "An error occurred while creating the contact")
         );
     }
-};
+}
 
 exports.findAll = async (req, res, next) => {
     let documents = [];
@@ -35,7 +35,7 @@ exports.findAll = async (req, res, next) => {
         );
     }
     return res.send(documents);
-};
+}
 
 exports.findOne = async (req, res, next) => {
     try {
@@ -51,7 +51,7 @@ exports.findOne = async (req, res, next) => {
             `Error retrieving contact with id=${req.params.id}`)
         );
     }
-};
+}
 
 exports.update = async (req, res, next) => {
     if(Object.keys(req.body).length === 0) {
