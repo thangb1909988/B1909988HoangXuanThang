@@ -51,7 +51,7 @@ exports.findOne = async (req, res, next) => {
             `Error retrieving contact with id=${req.params.id}`)
         );
     }
-}
+};
 
 exports.update = async (req, res, next) => {
     if(Object.keys(req.body).length === 0) {
